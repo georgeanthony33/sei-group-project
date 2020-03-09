@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "serve": "webpack-dev-server --mode=development",
+    "build": "webpack -p",
     "start:back": "nodemon",
     "start:front": "webpack-dev-server --mode-development",
     "seed": "node db/seeds.js",
