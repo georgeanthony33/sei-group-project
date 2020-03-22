@@ -31,7 +31,7 @@ $ yarn start
 
 ## Deployment
 
-The game is deployed on Heroku and can be found here: out-and-about-activities.herokuapp.com
+The game is deployed on Heroku and can be found here: http://out-and-about-activities.herokuapp.com/
 
 ## Technologies Used
 
