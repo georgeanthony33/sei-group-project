@@ -45,7 +45,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         {
           name: 'Football on the Common',
           category: 'Football',
-          date: new Date('January 18, 2020'),
+          date: new Date('May 18, 2020'),
           time: '06:00 PM',
           location: 'Clapham Common',
           postcode: 'SW47AJ',
@@ -59,7 +59,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         {
           name: 'Football on the Common',
           category: 'Football',
-          date: new Date('January 10, 2020'),
+          date: new Date('May 10, 2020'),
           time: '06:00 PM',
           location: 'Clapham Common',
           postcode: 'SW47AJ',
@@ -73,7 +73,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         {
           name: 'Football on the Common',
           category: 'Football',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '06:00 PM',
           location: 'Clapham Common',
           postcode: 'SW47AJ',
@@ -86,7 +86,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Field hockey game',
           category: 'Field Hockey',
-          date: new Date('February 14, 2020'),
+          date: new Date('April 14, 2020'),
           time: '03:00 PM',
           location: 'Millfields Park',
           postcode: 'E50AR',
@@ -99,7 +99,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Badminton Doubles',
           category: 'Badminton',
-          date: new Date('February 23, 2020'),
+          date: new Date('April 23, 2020'),
           time: '10:00 AM',
           location: 'Highbury Fields',
           postcode: 'N52AB',
@@ -112,7 +112,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Dogwalking',
           category: 'Walking',
-          date: new Date('February 23, 2020'),
+          date: new Date('April 23, 2020'),
           time: '15:00 PM',
           location: 'Canning Town Tube Station',
           postcode: 'N52AB',
@@ -125,7 +125,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Bootcamp',
           category: 'Bootcamp',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '10:00 AM',
           location: 'Blackheath Common',
           postcode: 'SE37AP',
@@ -138,7 +138,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Fun Run',
           category: 'Running',
-          date: new Date('February 23, 2020'),
+          date: new Date('April 23, 2020'),
           time: '10:00 AM',
           location: 'Brockwell Park',
           postcode: 'SE249BJ',
@@ -151,7 +151,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Power walking',
           category: 'Walking',
-          date: new Date('February 29, 2020'),
+          date: new Date('April 29, 2020'),
           time: '11:00 AM',
           location: 'Greenwich Park',
           postcode: 'SE108QY',
@@ -164,7 +164,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Football Match',
           category: 'Football',
-          date: new Date('February 29, 2020'),
+          date: new Date('April 29, 2020'),
           time: '12:00 PM',
           location: 'Tooting Bec Common',
           postcode: 'SW178JU',
@@ -177,7 +177,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Beginners Yoga',
           category: 'Yoga',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '12:00 PM',
           location: 'Battersea Park',
           postcode: 'SW114NJ',
@@ -190,7 +190,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Power walking',
           category: 'Walking',
-          date: new Date('February, 2020'),
+          date: new Date('April, 2020'),
           time: '11:00 PM',
           location: 'Streatham Common',
           postcode: 'SW163BX',
@@ -203,7 +203,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Football Match',
           category: 'Football',
-          date: new Date('March 01, 2020'),
+          date: new Date('May 01, 2020'),
           time: '11:00 AM',
           location: 'Dulwich Park',
           postcode: 'SE217EB',
@@ -229,7 +229,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Advanced Yoga',
           category: 'Yoga',
-          date: new Date('March 01, 2020'),
+          date: new Date('May 01, 2020'),
           time: '06:00 PM',
           location: 'Southwark Park',
           postcode: 'SE162TX',
@@ -242,7 +242,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Tag Rugby For Beginners',
           category: 'Rugby',
-          date: new Date('February 15, 2020'),
+          date: new Date('April 15, 2020'),
           time: '02:00 PM',
           location: 'Victoria Park',
           postcode: 'E35TB',
@@ -255,7 +255,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Run Club',
           category: 'Running',
-          date: new Date('February 16, 2020'),
+          date: new Date('April 16, 2020'),
           time: '10:00 AM',
           location: 'Dulwich Park',
           postcode: 'SE217EB',
@@ -268,7 +268,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Run Run Run',
           category: 'Running',
-          date: new Date('February 18, 2020'),
+          date: new Date('April 18, 2020'),
           time: '08:00 PM',
           location: 'Tooting Bec Station',
           postcode: 'SW177AA',
@@ -281,7 +281,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Lunchtime Burst',
           category: 'Running',
-          date: new Date('February 17, 2020'),
+          date: new Date('April 17, 2020'),
           time: '12:00 PM',
           location: 'Canary Wharf Station',
           postcode: 'E145NY',
@@ -294,7 +294,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Football For Fun',
           category: 'Football',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '03:00 PM',
           location: 'Finsbury Park',
           postcode: 'N41EE',
@@ -307,7 +307,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Beginners Yoga',
           category: 'Yoga',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '12:00 PM',
           location: 'Blackheath Commmon',
           postcode: 'SE37AP',
@@ -320,7 +320,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Power walking',
           category: 'Walking',
-          date: new Date('February 23, 2020'),
+          date: new Date('April 23, 2020'),
           time: '01:00 PM',
           location: 'Greenwich Park',
           postcode: 'SE108QY',
@@ -333,7 +333,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Bootcamp',
           category: 'Bootcamp',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '10:00 AM',
           location: 'Battersea Park',
           postcode: 'SW114NJ',
@@ -346,7 +346,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Bootcamp',
           category: 'Bootcamp',
-          date: new Date('February 26, 2020'),
+          date: new Date('April 26, 2020'),
           time: '03:00 PM',
           location: 'Battersea Park',
           postcode: 'SW114NJ',
@@ -359,7 +359,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Bootcamp',
           category: 'Bootcamp',
-          date: new Date('February 25, 2020'),
+          date: new Date('April 25, 2020'),
           time: '03:00 PM',
           location: 'Battersea Park',
           postcode: 'SW114NJ',
@@ -372,7 +372,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Bootcamp',
           category: 'Bootcamp',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '10:00 AM',
           location: 'Battersea Park',
           postcode: 'SW114NJ',
@@ -385,7 +385,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Bootcamp',
           category: 'Bootcamp',
-          date: new Date('February 29, 2020'),
+          date: new Date('April 29, 2020'),
           time: '08:00 AM',
           location: 'Battersea Park',
           postcode: 'SW114NJ',
@@ -398,7 +398,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Bootcamp',
           category: 'Bootcamp',
-          date: new Date('February 29, 2020'),
+          date: new Date('April 29, 2020'),
           time: '03:00 PM',
           location: 'Battersea Park',
           postcode: 'SW114NJ',
@@ -411,7 +411,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Advanced Yoga',
           category: 'Yoga',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '03:00 PM',
           location: 'Victoria Park',
           postcode: 'E35TB',
@@ -424,7 +424,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Advanced Yoga',
           category: 'Yoga',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '03:00 PM',
           location: 'Battersea Park',
           postcode: 'SW114NJ',
@@ -437,7 +437,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Dogwalking',
           category: 'Walking',
-          date: new Date('February 29, 2020'),
+          date: new Date('April 29, 2020'),
           time: '03:00 PM',
           location: 'Tooting Bec Common',
           postcode: 'SW177AA',
@@ -450,7 +450,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Football on the Common',
           category: 'Football',
-          date: new Date('February 29, 2020'),
+          date: new Date('April 29, 2020'),
           time: '06:00 PM',
           location: 'Clapham Common',
           postcode: 'SW47AJ',
@@ -463,7 +463,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Beginners Yoga',
           category: 'Yoga',
-          date: new Date('February 29, 2020'),
+          date: new Date('April 29, 2020'),
           time: '12:00 PM',
           location: 'Millfields Park',
           postcode: 'E50AR',
@@ -476,7 +476,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Field hockey game',
           category: 'Field Hockey',
-          date: new Date('February 29, 2020'),
+          date: new Date('April 29, 2020'),
           time: '01:00 PM',
           location: 'Blackheath Common',
           postcode: 'SE37AP',
@@ -489,7 +489,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Bootcamp',
           category: 'Bootcamp',
-          date: new Date('February 29, 2020'),
+          date: new Date('April 29, 2020'),
           time: '10:00 AM',
           location: 'Dulwich Park',
           postcode: 'SE217EB',
@@ -502,7 +502,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Beginners Yoga',
           category: 'Yoga',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '11:00 AM',
           location: 'Dulwich Park',
           postcode: 'SE217EB',
@@ -515,7 +515,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Bootcamp',
           category: 'Bootcamp',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '11:30 AM',
           location: 'Dulwich Park',
           postcode: 'SE217EB',
@@ -528,7 +528,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Football on the Common',
           category: 'Football',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '11:45 AM',
           location: 'Dulwich Park',
           postcode: 'SE217EB',
@@ -541,7 +541,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Dogwalking',
           category: 'Walking',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '12:00 PM',
           location: 'Dulwich Park',
           postcode: 'SE217EB',
@@ -554,7 +554,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Advanced Yoga',
           category: 'Yoga',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '01:00 PM',
           location: 'Dulwich Park',
           postcode: 'SE217EB',
@@ -567,7 +567,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Power walking',
           category: 'Walking',
-          date: new Date('February 22, 2020'),
+          date: new Date('April 22, 2020'),
           time: '01:30 PM',
           location: 'Dulwich Park',
           postcode: 'SE217EB',
@@ -580,7 +580,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Power walking',
           category: 'Walking',
-          date: new Date('February 23, 2020'),
+          date: new Date('April 23, 2020'),
           time: '01:30 PM',
           location: 'Victoria park',
           postcode: 'E35TB',
