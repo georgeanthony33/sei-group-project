@@ -1,7 +1,7 @@
 ![ga_cog_large_red_rgb](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png)
 
 # Software Engineering Immersive: Project 3
-This is my third project of the General Assembly Software Engineering Immersive course (Week 8). It was a 7 day four-person group project.
+This is my third project of the General Assembly Software Engineering Immersive course (Week 8). It was a seven day four-person group project.
 
 ## Team Mates
 
@@ -15,11 +15,14 @@ This is my third project of the General Assembly Software Engineering Immersive 
 * From the project root folder, enter the following commands into the terminal:
 
 ```
-<!— To install all the packages listed in the package.json: —> $ yarn 
+<!— To install all the packages listed in the package.json: —>
+$ yarn 
 
-<!- Navigate into the shell -> $ yarn seed
+<!- Navigate into the shell ->
+$ yarn seed
 
-<!— Run the app from your localhost: —> $ yarn start
+<!— Run the app from your localhost: —>
+$ yarn start
 
 <!— Check the console for any issues and if there are any then check the package.json for any missing dependencies —>
 
@@ -28,7 +31,7 @@ This is my third project of the General Assembly Software Engineering Immersive 
 
 ## Deployment
 
-The game is deployed on Heroku and can be found [here](out-and-about-activities.herokuapp.com).
+The game is deployed on Heroku and can be found here: out-and-about-activities.herokuapp.com
 
 ## Technologies Used
 
@@ -50,7 +53,7 @@ The game is deployed on Heroku and can be found [here](out-and-about-activities.
 
 ### Project Management
 
-We used a Trello board to organise our tasks and prevent duplication of work, setting time aside each day to assign tasks and discuss our progress. The tasks in Trello were split into "to do", "in progress" and "done". We also used Trello cards for useful links, to pool design ideas and store detailed instructions for our GitHub collaboration process. We made sure to carefully follow these steps upon completing each task and communicating any Git pushes to the group using Slack.
+We used a Trello board to organise our tasks and prevent duplication of work, setting time aside each day to assign tasks and discuss our progress. The tasks in Trello were split into "To Do", "In Progress" and "Done". We also used Trello cards for useful links, to pool design ideas and store detailed instructions for our GitHub collaboration process. We made sure to carefully follow these steps upon completing each task and communicating any Git pushes to the group using Slack.
 
 ![Trello](src/assets/Trello.png)
 
