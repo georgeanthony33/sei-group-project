@@ -515,7 +515,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Bootcamp',
           category: 'Bootcamp',
-          date: new Date('April 22, 2020'),
+          date: new Date('February 22, 2020'),
           time: '11:30 AM',
           location: 'Dulwich Park',
           postcode: 'SE217EB',
@@ -528,7 +528,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         }, {
           name: 'Football on the Common',
           category: 'Football',
-          date: new Date('April 22, 2020'),
+          date: new Date('March 14, 2020'),
           time: '11:45 AM',
           location: 'Dulwich Park',
           postcode: 'SE217EB',
