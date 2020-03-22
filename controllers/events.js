@@ -34,14 +34,12 @@ async function create(req, res) {
   req.body.longitude = await getLong(req.body.postcode)
   req.body.attendees = [req.currentUser]
 
-  console.log(req.body)
   Event
     .create(req.body)
     .then(createdEvent => {
       return res.status(201).json(createdEvent)
     })
     .catch(err => res.status(422).json(err))
-
 }
 
 function show(req, res, next) {
@@ -125,12 +123,9 @@ function attend(req, res) {
 function notAttend(req, res) {
   Event
     .findById(req.params.id)
-    // .then(console.log('REQ', req))
     .then(event => { 
       if (!event) return res.status(404).json({ message: 'Not Found ' })
       const filteredAttendees = event.attendees.filter(attendee => !attendee.equals(req.currentUser._id))
-      // if (!attend) return res.status(404).json({ message: 'Not Found ' })
-      // if (!attend.user.equals(req.currentUser._id)) return res.status(401).json({ message: 'Unauthorised' })
       event.attendees = filteredAttendees
       return event.save()
     })

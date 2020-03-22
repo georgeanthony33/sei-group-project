@@ -1,6 +1,3 @@
-// require('dotenv').config()
-// const mapboxToken = process.env.MAPBOX_ACCESS_TOKEN
-// const axios = require('axios')
 const mongoose = require('mongoose')
 
 const commentSchema = new mongoose.Schema({
@@ -27,17 +24,6 @@ const eventSchema = new mongoose.Schema({
 }, {
   timestamps: true
 })
-
-
-// eventSchema
-//   .virtual('latitude')
-//   .get(async function () {
-//     const resMap = await axios.get(
-//       `https://api.mapbox.com/geocoding/v5/mapbox.places/${this.postcode}.json?access_token=${mapboxToken}`
-//     )
-//     // console.log(resMap.data.features[0].center[1])
-//     return resMap.data.features[0].center[1]
-//   })
 
 eventSchema.plugin(require('mongoose-unique-validator'))
 

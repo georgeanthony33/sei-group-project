@@ -45,6 +45,18 @@ The game is deployed on Heroku and can be found [here](out-and-about-activities.
 * Google Fonts
 * Git
 * GitHub
+* Trello
+* Figma
+
+### Project Management
+
+We used a Trello board to organise our tasks and prevent duplication of work, setting time aside each day to assign tasks and discuss our progress. The tasks in Trello were split into "to do", "in progress" and "done". We also used Trello cards for useful links, to pool design ideas and store detailed instructions for our GitHub collaboration process. We made sure to carefully follow these steps upon completing each task and communicating any Git pushes to the group using Slack.
+
+![Trello](src/assets/Trello.png)
+
+We also used Figma to design our wireframes. This gave us a clear sense of direction from Day 1 of our project and enabled us to each have the same end goal in mind when it came to building out and designing the front end.
+
+![Figma](src/assets/Figma.png)
 
 ## Website Architecture
 
@@ -60,21 +72,110 @@ The home page provides a short description of exactly what the website is used f
 
 ### Event Search Results Page
 
-The Event Search Results page carries out an axios request on the events API from the server, together with the search parameters from the props passed through from the home page. The functionality then filters out events from past dates, then filters by activity, then by postcode, date and time.
+The Event Search Results page carries out an axios request on the events API from the server, together with the search parameters from the props passed through from the home page. The functionality then filters out events from past dates, then filters by activity, then by postcode, date and time. The results are shown as a listing on the left hand side, with a map showing the locations of each result on the right hand side.
 
 If the search finds no events of a certain category in the chosen area, events in that category from further away are shown. Likewise, if there are no events on the user's chosen data, events of the same category on different dates are shown.
 
 ![EventsIndex](src/assets/EventsIndex.png)
 
+### Event Show Page
+
+Clicking on a specific event takes the user to the Event Show Page, where details are provided on date, time, location (including a map) and description of the event. The page also shows a list of event attendees ang gives users the option to click to attend the event themselves, which, using React, instantaneously re-renders the page to add the user to the attendees list. The comments section of the right hand side uses a similar logic, enabling users to chat with each other about plans, further details and feedback from the event. If the user is also the creator of the event, then they will see the options to update and delete the event.
+
+![EventShow](src/assets/EventShow.png)
+
+### User Profile Page
+
+The navigation bar enables users to navigate to their profile page. It is also possible to navigate to other user's profile pages (in an unauthorised capacity) through finding and clicking on event attendees.
+
+The user profile page shows user details such as full name and email, together with past, upcoming and created events with a brief summary of the details and links to take users a specific Event Show page. If the user is on their own profile page, they also have the option to upload/change their profile image, using Cloudinary to store the uploaded image.
+
+![UserProfile](src/assets/UserProfile.png)
+
+## My Contributions
+
+### User Profile Back End
+
+I built out the user model, complete with full authentication, password confirmation on registration, validation and encryption using bcrypt. Prior to axios get requests for the user's data, the model attaches two virtual fields: one for events that the user has created and another for events the user is attending, using the following code:
+
+```JavaScript
+userSchema.virtual('createdEvents', {
+  ref: 'Event',
+  localField: '_id',
+  foreignField: 'user'
+})
+
+userSchema.virtual('attendingEvents', {
+  ref: 'Event',
+  localField: '_id',
+  foreignField: 'attendees'
+})
+```
+
+### Event Attendees
+
+Upon clicking the "going" button on an event, I designed the back-end functionality to take the current user's ID and add this to event attendees array, as long as the user isn't already in the array. The front-end then reflects this change through changing the "going" button to a "not going" button and adding the user to the attendees list.
+
+Upon clicking the "not going" button, the front-end goes through the list of attendees and finds the attendeeID that matches the current user's ID. It then sends this, together with the event ID, to the back-end which filters the attendees array for all IDs except the current user ID and saves. The front-end then carries out an axios get request on the updated attendee data and re-renders the page to reflect this, using the following function:
+
+```JavaScript
+handleSubmitNotAttend = async (e) => {
+  e.preventDefault()
+  const eventId = this.props.match.params.id
+  const attendeeId = this.state.eventInfo.attendees.filter(attendee => attendee._id === FrontAuth.getPayload().sub)[0]._id
+  try {
+    await axios.delete(`/api/events/${eventId}/attend/${attendeeId}`, {
+      headers: { Authorization: `Bearer ${FrontAuth.getToken()}` }
+    })
+    this.getEvent(eventId)
+  } catch (err) {
+    this.setState({ errors: err })
+  }
+}
+```
+
+I also added in the functionality to automatically set the creator of an event to be an attendee as well. The user will be automatically added to the attendees list, but is able to then click "not going", if they wish.
+
+### Event Comments
+
+I used a similar logic for the event comments box to that which I used for attendees, but also ensured that the Event Show controller included ```.populate('comments.user')``` to allow the front-end to populate the user for each comment. The code below was used for creating a comment in the back-end:
+
+```JavaScript
+function commentCreate(req, res) {
+  req.body.user = req.currentUser
+  Event
+    .findById(req.params.id)
+    .then(event => {
+      if (!event) return res.status(404).json({ message: 'Not Found ' })
+      event.comments.push(req.body)
+      return event.save()
+    })
+    .then(event => res.status(201).json(event))
+    .catch(err => res.json(err))
+}
+```
+
+### Testing
+
+I used Mocha and Chai to build 36 tests which all passed to ensure that the following controllers were functioning correctly:
+
+* User:
+  * Login
+  * Register
+* Events:
+  * Show
+  * Create
+  * Index
+  * Update
+  * Delete
+
+These tests uncovered an important detail we were missing with our error codes: we had initially set all unsuccessful error codes to 400. After being flagged by the tests, we were able to modify the error codes to be more aligned to the specific error being produced.
+
 ## Reflections
 
-### Wins
+Our goal was to build a fully functional full-stack app which encourages users to create and join free events in their community. Due to our hard work, strong team-bond, communication and thorough planning from the outset, we were able to achieve this. Moving forward, I would like to add the following to the app:
 
-
-
-### Challenges
-
-
-
-### Future Features
-
+* Tests for the other controllers, such as comments and attendees, to confirm that the back-end functionality is fully bulletproof. 
+* Ensure the website is mobile-responsive
+* Add a weather API to the Event Show page, because most of the events are outdoor activities
+* An attendance pending-acceptance feature, where, upon clicking "going", a user is added to a pending list for the creator of the list to then accept before the user is officially added to the attendees list.

@@ -88,8 +88,6 @@ class EventShow extends React.Component {
     e.preventDefault()
     const eventId = this.props.match.params.id
     const attendeeId = this.state.eventInfo.attendees.filter(attendee => attendee._id === FrontAuth.getPayload().sub)[0]._id
-    console.log(eventId)
-    // console.log(attendId)
     try {
       await axios.delete(`/api/events/${eventId}/attend/${attendeeId}`, {
         headers: { Authorization: `Bearer ${FrontAuth.getToken()}` }
@@ -323,14 +321,6 @@ class EventShow extends React.Component {
           </div>
         </div>
       </>
-      // <div className="row">
-      //   {this.props.location.state
-      //     ?
-      //     <button onClick={() => this.props.history.goBack()}>Back to Search</button>
-      //     :
-      //     null
-      //   }
-      // </div>
     )
   }
 }
