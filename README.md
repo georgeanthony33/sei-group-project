@@ -176,7 +176,28 @@ These tests uncovered an important detail we were missing with our error codes: 
 
 ## Reflections
 
-Our goal was to build a fully functional full-stack app which encourages users to create and join free events in their community. Due to our hard work, strong team-bond, communication and thorough planning from the outset, we were able to achieve this. Moving forward, I would like to add the following to the app:
+### Wins
+
+* Our team showed a strong sense of togetherness and communication throughout the project. We ensured that any Git activities were carried out in line with a clear and robust step-by-step process and then communicated across the group using Slack, meaning we avoided any problematic merge conflicts
+* We also maintained regular communication of ideas, updates and general project discussions which, together with thorough planning at the outset to determine our overall objective, process and design, ensured a consistent and efficient process flow. This enabled us to seamlessly pull together individually built components into one harmonious application
+* Maps on both Search Result page and Event Show page are interactive, using Mapbox functionality to allow users to scroll and zoom in and out.
+* Event Show page used React to provide a responsive experience for users wanting to click to attend - or not attend - events and add comments to the chat box.
+* In addition to the activities already listed on the website, event creators are also given the option of suggesting additional activities to be added, by submitting an email to the Team Out and About mailbox.
+
+### Challenges
+
+* From a personal perspective, writing the back-end controllers for attending / not attending events and adding comments required carefully thought-out logic and ensuring that event show controllers were populated to the required depths of information.
+* Writing the functionality to automatically add an event creator to the attendees required some modifications to the event model in order for the creator's data to be pulled through via the user model and correctly added to the attendees array.
+* Because we used Skeleton as our styling framework alongside SCSS, we came across some cross-contamination of styling due to CSS adjustments to Skeleton classes. This was resolved by using Chrome Dev Tools to find the root of the problem and then agree on our styling className conventions moving forward.
+
+### Key Learnings
+
+* Thorough and well-communicated Git processes ensure minimal merge conflicts and a generally smooth collaboration process.
+* Thorough testing will ensure that any minor issues or inconsistencies are flagged - the earlier that this is done, the sooner these issues can be resolved and prevented from having any knock-on effects with building the app further down the line.
+* With regards to writing attending / not attending and comments controllers mentioned in the Challenges section, I developed a broader awareness of using Mongoose methods in conjunction with higher order functions for greater flexibility in my code.
+* Using Moment.js makes date validation, manipulation and display much more efficient and manageable.
+
+### Future Features
 
 * Tests for the other controllers, such as comments and attendees, to confirm that the back-end functionality is fully bulletproof. 
 * Ensure the website is mobile-responsive
